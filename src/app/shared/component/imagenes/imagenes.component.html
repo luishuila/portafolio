@@ -1,0 +1,48 @@
+
+    <div class="modals" [ngClass]="{ 'is-models': active }">
+        <div class="modals-background" (click)="active =false"></div>
+        <div #dento class="modals-card" appGallerytres (movieminetomause)="active = $event">
+          <div class="btnbutto">
+          <button class="delete"  (click)="ocultar()"></button>
+        </div> 
+          <header class="modals-card-head">
+                <p class="modals-card-title">{{datos.trabajos}}</p>
+              </header>
+            <section class="modals-card-body modelcard">
+              <div class="imgcar">
+                <img class="imgn" src="{{datos.url}}"   alt="" >
+              </div>
+              <div class="parrafor" >
+                <p>{{datos.descripcion}}</p>
+            </div>
+            </section>
+        </div>
+    </div>
+
+    
+
+
+<!--<div class="modal" [ngClass]="{ 'is-active': active }">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">{{datos.trabajos}}</p>
+        <button class="delete" aria-label="close" (click)="ocultar()"></button>
+      </header>
+      src="./../../../../assets/imgpro.jpg"
+      <section class="modal-card-body modelcard">
+        <div class="imgcar">
+            <img class="imgcar"src="{{datos.url}}" alt="" >
+        </div>
+        <div>
+            <p>{{datos.descripcion}}</p>
+        </div>
+
+      </section>
+      <footer class="modal-card-foot">
+        <button class="button is-success" (click)="ocultar()">OK</button>
+      </footer>
+    </div>
+  </div>-->
+  
+  

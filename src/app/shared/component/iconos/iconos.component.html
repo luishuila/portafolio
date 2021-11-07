@@ -1,0 +1,26 @@
+
+
+
+<section class="icons">
+        <div class="selectoimage">
+            <div #input appSetcustom (movieminetomause)="masue($event)" class="card" *ngFor="let item of variable" [ngStyle]="{background: item.color,'z-index':0}">
+                <div class="imgs"  placeholder="Message">
+                <img [src]="item.url" class="img">
+                </div>
+                <div class="parrafo">
+                    <p class="parraf"> {{item.titulo}}</p>
+                </div>
+                <div class="tooltip">
+                    {{item.descripcion }}
+                 </div>
+            </div>
+        </div>
+    </section>
+    <h2 class="page-section__title">Tecnología que me interesa aprender</h2>
+    <carousel *ngIf="carga"  [class]="'lenguaje'" [height]="150" [width]="350" [cellWidth]="100" [cellsToScroll]="100">
+
+        <div class="carousel-cell dentrosele" *ngFor="let item of datos">
+            <img   [src]="item.url">
+            <p  class="position"> {{item.titulo}}</p>
+        </div>
+    </carousel>

@@ -1,0 +1,175 @@
+
+
+.header{
+  position: relative;
+
+  margin: auto;
+
+}
+
+.header--bg{
+  background: url("./../../../../assets/images/header-background.png") no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+
+.header--bg:after{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: -webkit-linear-gradient( 90deg, rgba(108,76,206, .9) 0%, rgba(127,86,253, .9) 100%);
+  z-index: -1;
+}
+
+.header__content{
+  padding-top: 11em;
+  padding-bottom: 7em;
+}
+
+
+.header__content__block{
+
+  font-size: 2em;
+  opacity: 1;
+  animation:  slideintss  3s  forwards ;
+
+  font-weight: bold;
+  color: #fff;
+
+
+}
+
+@keyframes slideintss{
+0%{
+  font-size:2em;
+  opacity: 1;
+
+}
+
+100%{
+  font-size: 10px;
+  opacity: 0;
+
+}
+}
+
+
+.header__content__title{
+  font-size: 50px;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 0;
+  animation:  titulo  3s  forwards ;
+
+}
+@keyframes titulo{
+  0%{
+
+
+    opacity: 0;
+
+  }
+
+  100%{
+
+    opacity: 1;
+
+  }
+  }
+
+
+
+
+.header__content__sub-title .padding{
+  padding-right: 13px;
+  padding-left: 13px;
+}
+
+
+
+
+
+
+
+
+.social-icon{
+  margin-bottom: 60px;
+ left: 10em;
+ position: relative;
+ width: 100%;
+ overflow: hidden;
+}
+
+
+.imgs{
+  width: 40px;
+  height: 40px;
+
+  opacity: .9;
+}
+
+
+.social-icon-il{
+  position: absolute;
+}
+.social-icon-il{
+  display: block;
+  position: relative;
+}
+.social-icon-ul{
+  display: inline-block;
+  display: grid;
+}
+.parrafo{
+  transform: translate(30em);
+  animation: slidein  5s  forwards 1s;
+  display: block;
+  opacity: 0;
+}
+@keyframes slidein{
+  0%{
+    opacity: 0;
+    transform: translate(20em);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translate(-1em);
+  }
+}
+
+.social-icon ul li{
+  display: inline-block;
+}
+
+.social-icon ul li a{
+  color: #fff;
+
+}
+
+
+@media (max-width: 850px) {
+  .header__content{
+    padding-top: 10em;
+    padding-bottom: 4em;
+
+  }
+  .social-icon{
+    position:initial;
+  }
+}
+@media (max-width: 500px) {
+  .header__content{
+    padding-top: 6em;
+    padding-bottom: 5em;
+
+  }
+  .social-icon{
+    position:initial;
+  }
+}

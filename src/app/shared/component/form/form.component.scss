@@ -1,0 +1,54 @@
+.bstn{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.alerta{
+    width: 50%;
+}
+.btnbutto{
+    margin-top: 2em;
+}
+
+.inputReactive{
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+.nombreDv{
+    position: relative;
+    width: 250px;
+    height: 110px;
+    padding: 6px;
+    display: flex;
+    margin: auto;
+    background: url("./../../../../assets/images/robo.png")      no-repeat   ; 
+    background-size: auto;
+    overflow: hidden;
+    background-size: 25px;
+    
+       background-size: 100% 100%;
+    
+}
+.nombreDv::before{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    background: black;
+    opacity: .5;
+    
+}
+.nombreDv>p{justify-content: center;
+    align-items: center;
+    margin: auto;
+    transform: rotate(10deg );
+    font-size: 40px;
+    text-align: center;
+ 
+}

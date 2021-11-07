@@ -1,0 +1,24 @@
+<div class="layout" appScrollAbajo (moviemineto)="scroll($event)">
+
+    <header class="header" appDomhtml (moviemineto)="doSomethingOnInternalScroll($event)">
+        <nav class="navbar header--bg " [ngClass]="{'nabaraposition': varibale}">
+            <app-navbar></app-navbar>
+        </nav>
+        <div class="headernav">
+            <app-header></app-header>
+        </div>
+    </header>
+
+
+    <main class="main">
+
+        <div class="maindos">
+            <app-main></app-main>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <app-footer></app-footer>
+    </footer>
+</div>
+<router-outlet></router-outlet>

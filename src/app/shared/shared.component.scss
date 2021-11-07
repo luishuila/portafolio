@@ -1,0 +1,98 @@
+.layout{
+    width:100%;
+    height:auto;
+    display: grid;
+    grid-template-columns:    1fr;
+    grid-template:  70px 1fr 70px    ;
+    overflow-x:hidden ;
+}
+
+.header{
+    width:100%;
+   // height: auto;
+    display: flex;
+    grid-column: 1/ span 2;
+    flex-direction: column;
+  //  opacity: .9;
+
+  
+}
+.headernav{
+    width: 100vw;
+  //  height: auto;
+    position: sticky;
+   
+}
+.navbar{
+
+
+  //  height: auto;
+    width: 100%;
+    flex-direction: row-reverse;
+    background:  linear-gradient(180deg, rgba(132, 94, 248, 0.9) 7%,  rgba(180, 155, 253, 0.9)); 
+    opacity: .9;
+
+}
+
+
+.header--bg{
+   
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    display: flex;
+  }
+  
+  .header--bg:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: -webkit-linear-gradient( 90deg, rgba(108,76,206, .9) 0%, rgba(127,86,253, .9) 100%);
+    z-index: -1;
+  }
+
+.main{
+
+    width:100%;
+    display: flex;
+    grid-column: 1/ span 2;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer{
+    width:100%;
+    height: auto;
+    display: flex;
+    grid-column: 1/ span 2;
+    background: red;
+ 
+}
+
+.nabaraposition{
+    position: fixed;
+    background:  linear-gradient(180deg, rgba(132, 94, 248, 0.9) 7%,  rgba(180, 155, 253, 0.9)); 
+    box-shadow: .2em .2em .5em rgb(134, 131, 131); 
+    opacity: 1;
+    z-index: 100;
+}
+
+.maindos{
+    display: flex;
+    margin: auto;
+    justify-self: center;
+}
+.section{
+    background: -webkit-linear-gradient( 90deg, rgba(108,76,206, .9) 0%, rgba(127,86,253, .9) 100%);
+
+
+}
+.iconos{
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    height: 100px;
+    background: red;
+}

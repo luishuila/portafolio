@@ -1,0 +1,13 @@
+<div class="contenedo">
+
+
+<div class="cards">
+    <div (click)="aletraevento(item)"  (movieminetomause)="eventos($event)"  appTextocentrado class="imagtext"   *ngFor="let item of datos|async; let index =  index" >   
+   <img class="imgcar"src="{{item.url}}" alt="" >
+      <div #Midse [ngClass]="{'textocentr':((index+1) != numero)}" [id]="(index+1)" >
+        <h3  [ngClass]="{'centrastexto':!((index+1) != numero)}"> {{item.trabajos}} </h3> 
+      </div>
+    </div>
+</div>
+</div>
+<app-imagenes></app-imagenes>

@@ -1,0 +1,129 @@
+
+.modals{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: none;
+    text-align: center;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    margin: auto;
+    width: 100vw;
+   // height: 100vh;
+    z-index: 10;
+    overflow: hidden; 
+
+
+}
+.is-models{
+    display: block;
+    top: 1em;
+    z-index: 200;
+}
+.modals-background{
+    z-index: 3;
+    background: rgb(49, 48, 48);
+    opacity: .5;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.modals-card{
+    top: 2em;
+    position: relative;
+    z-index: 9;
+    margin: auto;
+    width: 89%;
+    height: 90vh;
+    background: rgb(224, 224, 224 );
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border-top-right-radius: 1.3em 1.4em;
+}
+
+.modals-card-head{
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    flex-direction: row-reverse;
+
+}
+.btnbutto{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: red;
+    width: 100%;
+    order: 1;
+    flex-wrap: wrap-reverse;
+  
+}
+
+.delete{
+    width: 1.5em;
+    height: 1.5em;
+    background: none;
+    background-image: url('./../../../../assets/icons/cerrar.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: calc( .1em - .7em) ;
+
+    right: -.8em;
+    border: 1px solid;
+    border-radius: 50px;
+    background-color: rgba(248, 248, 248, 0.2);
+}
+.delete:hover{
+    background-color: rgba(255, 131, 131, 0.6);
+}
+.modals-card-title{
+    padding: .2em;
+    font-size: 1.8em;
+    margin: auto;
+}
+.modals-card-body{
+
+    width: 99%;
+    height: 28.5em;
+    overflow: auto;
+
+}
+.imgcar{
+    margin: auto;
+    width: 98%;
+    overflow: auto;
+    height: 50vh;
+}
+.imgn{
+    overflow: auto;
+    width: 40em;
+}
+.parrafor{
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+    height: auto;
+    text-align: initial;
+    height: auto;
+}
+
+@media only screen and (min-width: 999px){
+    .imgcar{
+
+        margin: auto;
+        width: 98%;
+        overflow: auto;
+        height: auto;
+    }
+    .imgn{
+        overflow: hidden;
+        width: 60%;
+    }
+  }

@@ -1,0 +1,17 @@
+
+  <img  src="assets/video/Pexels.gif" alt="Funny image" class="myVideo">
+
+
+<div id="menus" class="navbarmenu menus" appScrollAbajo (moviemineto)="scroll($event)">
+    <div class="menu" (click)="menu()">
+    </div>
+    <ul class="navbarul" [ngClass]="{'navbarull':styilos}" (click)="menu()">
+
+
+        <li (click)="home(item.key)" class="navbarli" *ngFor="let item of menux"><a class="navbara"> {{item.nombre}}
+        </a>
+        </li>
+
+
+    </ul>
+</div>

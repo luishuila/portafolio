@@ -1,0 +1,29 @@
+<footer class="footer footer--bg" *ngFor="let item of data">
+  <div class="informationcontainer container text-center">
+    <h1 class="footer__title"></h1>
+    <ul class="footer__contact-information">
+      <li><a href="tel:5555555555"> <span class="spanma">Información </span>
+          <p class="parrafoinfotmation"> {{item.informacion}} </p>
+        </a></li>
+
+      <li><a href="#"><span class="spanma">UBICACIÓN </span> {{item.ubicacion}}  </a></li>
+
+    </ul>
+  </div>
+  <hr class="linear">
+  <div class="informationlogo container  text-center">
+    <div class="social-icon ">
+      <ul class="icons">
+        <li class="icons-li"><a class="icons-a" target="_blank" href="{{item.whatsapp}}">
+            <img class="imgs" src="assets/icons/whatsapp.png">
+          </a></li>
+        <li  class="icons-li"><a class="icons-a" target="_blank" href="{{item.facebook}}">
+            <img class="imgs" src="assets/icons/facebook.png">
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <p class="footer__paragraph">Copyright &copy; 2021</p>
+</footer>

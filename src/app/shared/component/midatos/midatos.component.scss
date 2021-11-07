@@ -1,0 +1,156 @@
+
+.page-section{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.page-section__title{
+  font-size: 35px;
+  color: #273f59;
+  text-align: center;
+  font-weight: bold;
+}
+
+.page-section__title--white{
+  color: #fff;
+}
+
+.page-section__title-style{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+}
+
+.page-section__paragraph{
+  font-size: 15px;
+  color: #5d5d5d;
+  max-width: 540px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 60px;
+  text-align: inherit;
+}
+
+.page-section__paragraph--white{
+  color: #fff;
+  line-height: 1.8;
+}
+
+.about__container--narrow{
+    max-width: 1245px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .about__content{
+    padding-top: 10px;
+    margin: auto;
+  }
+ .datos{
+  justify-content: center;
+   margin: auto;
+   display: grid;
+   grid-template-columns:  repeat(2, 1fr);
+   grid-gap: 10px;
+   grid-auto-rows: minmax(100px, auto);
+   margin-top: 10px;
+ }
+  .about__description{
+    font-size: 16px;
+    color: #636262;
+    text-align: center;
+    border-bottom: 1px #C1C1C1 dashed;
+    margin: auto;
+    display: block;
+    text-align: left;
+  }
+  
+  @media screen and (max-width: 991px){
+    .about__image{
+     text-align: center;
+   }
+   .datos{
+    display: grid;
+    grid-template-columns:  repeat(1, 1fr);
+    grid-gap: 0px;
+  }
+  .data{
+    margin: 0px;
+    height: auto;
+    padding: 0px;
+  }
+  }
+  
+  .about__bio{
+    font-size: 15px;
+    color: #636262;
+  }
+  
+  .about__bio strong{
+    font-size: 15px;
+    color: #2c4055;
+    font-family: Roboto-Light;
+  }
+  
+  .gutters-80.row{
+    margin-right: -40px;
+    margin-left: -40px;
+  }
+  
+  .gutters-80 > [class^="col-"], .gutters-80 > [class^="col-"]{
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+  
+  .row--margin-top{
+      margin:auto;
+  }
+  
+  .button{
+      padding: 12px 55px 12px 55px;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 15px;
+  }
+  
+  .button:hover{
+   color: #fff;
+  }
+  
+  .button--colorful{
+   background-color: #7F56FD;
+   font-family: Roboto-Light;
+   color: #fff;
+  }
+  
+  .button--default{
+    color: #455a64;
+    border: 1px solid #455a64;
+    margin-right: 15px;
+  }
+  
+  .button--default:hover{
+    background-color: #7F56FD;
+    color: #fff;
+    border: 1px solid #7F56FD;
+  }
+  
+  .button--margin{
+   display: inline-block;
+   margin-top: 40px;
+  }
+  
+  .portfolio__button-group .mixitup-control-active{
+    background-color: #7F56FD;
+    color: #fff;
+  }
+  
+  .page-section__title-style{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+  

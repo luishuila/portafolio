@@ -1,0 +1,94 @@
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCYqjm6_RZrEs-BIFawok0piw4prfrFN1w",
+    authDomain: "portafolio-b3eb8.firebaseapp.com",
+    projectId: "portafolio-b3eb8",
+    storageBucket: "portafolio-b3eb8.appspot.com",
+    messagingSenderId: "365316454626",
+    appId: "1:365316454626:web:434ab4f6eb051d610446bb",
+    measurementId: "G-WDRFTNXJBM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+4/1AY0e-g5uIGMDNhxiiJJZ0Otm8lu5BnpMDAbGaG_rL8Rg1ZeDHD5GLqSrDQk
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCYqjm6_RZrEs-BIFawok0piw4prfrFN1w",
+    authDomain: "portafolio-b3eb8.firebaseapp.com",
+    projectId: "portafolio-b3eb8",
+    storageBucket: "portafolio-b3eb8.appspot.com",
+    messagingSenderId: "365316454626",
+    appId: "1:365316454626:web:434ab4f6eb051d610446bb",
+    measurementId: "G-WDRFTNXJBM"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.4.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyBiNNKyI1aTv2Zy52mNOCduYXSHyiOlkt8",
+    authDomain: "portafolio-bbf82.firebaseapp.com",
+    projectId: "portafolio-bbf82",
+    storageBucket: "portafolio-bbf82.appspot.com",
+    messagingSenderId: "828173502887",
+    appId: "1:828173502887:web:677042bec1ca8a3e5c8e82",
+    measurementId: "G-07GCLQM52M"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>

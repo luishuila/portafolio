@@ -1,0 +1,167 @@
+<div class="center-block" >
+  <form class="row" ngForm>
+      <div class="col-md-4 mt-5">
+          <div class="card">
+              <div class="card-header">
+                  <span>Files</span>
+              </div>
+              <div class="card-body">
+                  <div (mouseOver)="estasobre = $event" [files]="archivos" appImages [ngClass]="{'file-over':estasobre}" class="drop-zone">
+                      <h4>Drop here your images</h4>
+                      <img src="../../../assets/img/cloud.png" alt="drop-images" />
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-8 mt-5">
+          <div class="card">
+              <div class="card-header">
+                  <h4>Files to Upload</h4>
+              </div>
+
+              <div class="card-body">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th>File name</th>
+                              <th>Size</th>
+                              <th>Progress</th>
+                              <th>URL</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr *ngFor="let items of archivos">
+                              <td>{{items.nombreArchivo}}</td>
+                              <td>
+                                  {{items.archivo.size / 1024 / 1024 |number:'.2-2' }} MB
+                              </td>
+                              <td>
+                                  <div class="progress">
+                                      <div class="progress-bar" role="progessbar" [ngStyle]="{ 'width': items.progreso + '%' }">
+                                          {{ items.progreso|tonumber | number: "1.0-0" }} %
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <a>Download URL</a>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+                </div>
+              </div>
+              <br>
+
+                      <div class="col">
+                          <input type="text" [(ngModel)]="formulario.titulo" class="form-control" placeholder="titulo" name="titulo">
+
+                      </div>
+                      <br>
+                      <div class="col">
+                        <input type="text" [(ngModel)]="formulario.tecnologia" class="form-control" placeholder="tecnologia" name="tecnologia">
+
+                    </div>
+                    <br>
+                    <div class="col">
+                      <input type="text" [(ngModel)]="formulario.subhijo" class="form-control" placeholder="subhijo" name="subhijo">
+                  </div>
+                  <br>
+                  <div class="col">
+                    <input type="text" [(ngModel)]="formulario.color" class="form-control" placeholder="color" name="color">
+                </div>
+                      <br>
+                      <div class="col">
+                          <textarea [(ngModel)]="formulario.descripcion" class="form-control" placeholder="Descriono" name="descripcion" type="text" class="form-control" placeholder="DESCRIPCION DE LOS IMAGES">
+
+                      </textarea>
+
+                      </div>
+                      <br>
+                      <br>
+                      <ul class="list-group">
+                        <li class="list-group-item">habilidades</li>
+                        <li class="list-group-item">aprender</li>
+                      </ul>
+                      <br>
+                      <br>
+                      <input type="text"  [(ngModel)]="formulario.selecion" class="form-control" placeholder="SELECIONA LA RUTA DE LO ARCHIVO" name="selecion">
+
+
+                  <br>
+
+                  <div class="container-buttons">
+                      <button class="btn btn-danger" (click)="limpiaArchivo()">Limpia</button>
+                      <button (click)="subiimagen()" class="btn btn-primary">
+                   Subir
+               </button>
+
+
+          </div>
+      </div>
+  </form>
+</div>
+
+
+<hr>
+<br>
+<h1>Tecnología que me interesa aprender</h1>
+<div class=" table-responsive">
+  <table class="table tables">
+    <thead>
+      <tr>
+
+        <th scope="col">Titulo</th>
+        <th scope="col">Nombre images</th>
+        <th scope="col">Documento de selecion</th>
+        <th scope="col">descripcion</th>
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of aprender ; index as i">
+        <td >{{item.titulo}}</td>
+        <td>{{item.nombreimg}}</td>
+        <td>{{item.selecion}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>
+              <button type="button" class="btn btn-danger" (click)="eliminarAprendes(item.id,item.nombreArchivo)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<hr>
+<br>
+<h1>HABILIDADES</h1>
+<div class=" table-responsive">
+  <table class="table tables">
+    <thead>
+      <tr>
+
+        <th scope="col">Titulo</th>
+        <th scope="col">Nombre images</th>
+        <th scope="col">Documento de selecion</th>
+        <th scope="col">descripcion</th>
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of habilidades ; index as i">
+        <td >{{item.titulo}}</td>
+        <td>{{item.nombreimg}}</td>
+        <td>{{item.selecion}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>
+              <button type="button" class="btn btn-danger" (click)="eliminarHabilidades(item.id,item.nombreArchivo)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+

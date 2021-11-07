@@ -1,0 +1,77 @@
+<ng-container *ngIf="!loginentr else login">
+    <form [formGroup]="formu" class="example-form" autocomplete="off">
+        <div class="form-row">
+            <div class="form-group col-12">
+                <label for="inputName">NOMBRE</label>
+                <input autocomplete="off" type="text" formControlName="name" name="name" class="form-control" id="inputName" placeholder="Nombre">
+                <div [ngClass]="{'alert alert-danger':getError('name')}">{{getError('name')}}</div>
+            </div>
+
+
+            <div class="form-group col-12">
+                <label for="inputEmail">CORREO</label>
+                <input autocomplete="off" type="text" formControlName="email" name="email" class="form-control" id="inputEmail" placeholder="ejemplo@ej.com">
+                <div [ngClass]="{'alert alert-danger':getError('email')}">{{getError('email')}}</div>
+            </div>
+            <div class="form-group col-12">
+                <label for="inputPhone">TELEFONO</label>
+                <input autocomplete="off" type="number" formControlName="phone" name="phone" class="form-control" id="inputPhone" placeholder="EJ:123456">
+                <div [ngClass]="{'alert alert-danger':getErrornumero('phone')}">{{getErrornumero('phone')}}</div>
+
+            </div>
+            <div class="form-group col-12">
+                <label for="exampleFormControlTextarea1">MENSAJE</label>
+                <textarea autocomplete="off" formControlName="descripcion" name="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <div [ngClass]="{'alert alert-danger':getError('descripcion')}">{{getError('descripcion')}}</div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="inputReactive">
+            <div class="nombreDv">
+                <p>{{letra}}</p>
+            </div>
+            <label for="inputReactive"></label>
+            <input (ngModelChange)="ngCHanger($event)" #enve autocomplete="off" type="text" formControlName="recaptchaReactive" name="recaptchaReactive" class="form-control" id="inputReactive" placeholder="CAPTCHA">
+            <div [ngClass]="{'alert alert-danger':getError('recaptchaReactive')}">{{getError('recaptchaReactive')}}</div>
+
+            <div *ngIf="capchar && formu.errors?.soniguales " role="alert">
+                <p class="alert alert-danger"> incorrect CAPTCHA </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col  text-center">
+                <button [disabled]="desactivabtn" (click)="sendEnvia()" type="submit" class="btnbutto btn btn-primary center-block">ENVIA</button>
+            </div>
+        </div>
+
+    </form>
+</ng-container>
+<ng-template #login>
+
+    <app-login>
+
+    </app-login>
+</ng-template>
+
+<!--
+   <div class="form-group col-12">
+      <label for="inputRobo">{{robo}}</label>
+      <input autocomplete="off" type="text" formControlName="recaptchaReactive" name="recaptchaReactive"  class="form-control" id="inputRobo" placeholder="EJ:123456">
+      <div [ngClass]="{'alert alert-danger':getError('recaptchaReactive')}">{{getError('recaptchaReactive')}}</div>
+      <div class="alert alert-danger alerta" role="alert" *ngIf="formu.get('recaptchaReactive').errors?.soniguales">
+        Es obligatorio recaptcha
+      </div>
+      <div *ngIf="formu.get('recaptchaReactive').invalid && this.formu.get('recaptchaReactive').touched">
+       <H1>hOLA</H1>
+        <div class="alert alert-danger alerta" role="alert" *ngIf="formu.get('recaptchaReactive').errors?.soniguales">
+     Es obligatorio recaptcha
+   </div>
+  </div>
+    </div>
+
+    -->

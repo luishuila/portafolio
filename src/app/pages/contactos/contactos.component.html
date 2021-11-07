@@ -1,0 +1,35 @@
+
+
+<div class="table-responsive">
+  <table class="table tables">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">fecha</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Decipcion</th>
+
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of array ; index as i">
+        <td [appCambiaestado]="item.active"  >{{i + 1}}</td>
+
+        <td >{{item.name}}</td>
+        <td >{{item.fecha}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.phone}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>
+          <button type="button" class="btn btn-success" (click)="contecto( item,item.id)">Si contecto</button>
+          <button type="button" class="btn btn-secondary" (click)="espera( item,item.id)">espera</button>
+          <button type="button" class="btn btn-light" (click)="norma( item,item.id)">Normal</button>
+          <button type="button" class="btn btn-danger" (click)="eliminar(item.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

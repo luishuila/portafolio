@@ -1,0 +1,72 @@
+
+
+<div class="container conte">
+    <form  [formGroup]="formu" >
+      <div class="form-group row edita">
+        <label for="formGroupExampleInput" >ID</label>
+        <input [disabled]="true" formControlName="id" name="id" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="form-group row edita">
+      <label for="formGroupExampleInput" >Token</label>
+      <input [disabled]="true" formControlName="tokenlogin" name="tokenlogin" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  </div>
+        <div class="form-group row">
+            <label for="formGroupExampleInput">NOMBRE</label>
+            <input formControlName="nombre" name="nombre" type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        </div>
+        <div class="form-group row">
+            <label for="exampleFormControlTextarea1">PERFIL</label>
+            <textarea formControlName="perfil" name="perfil"  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+
+        <div class="form-group row">
+            <label for="formGroupExampleInput">EDAD</label>
+            <input formControlName="edad" name="edad"   type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        </div>
+        <div class="form-group row">
+            <label for="formGroupExampleInput">TITULO</label>
+            <input  formControlName="titulo" name="titulo"   type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        </div>
+
+        <div class="form-group row">
+            <label for="formGroupExampleInput"> IDIOMA</label>
+            <input formControlName="lenguajes" name="lenguajes"   type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        </div>
+        <div class="form-group row">
+          <label for="formGroupExampleInput">DE Nacimiento </label>
+          <input formControlName="nacimiento" name="nacimiento"   type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+      </div>
+        <div class="form-group row">
+            <label for="formGroupExampleInput">VIVE</label>
+            <input formControlName="vive" name="vive"   type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        </div>
+        <hr>
+        <div class="form-group row">
+          <label for="formGroupExampleInput">ubicacion</label>
+          <input formControlName="ubicacion" name="ubicacion"   type="ubicacion" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+      </div>
+      <div class="form-group row">
+        <label for="exampleFormControlTextarea1">informacion</label>
+        <textarea formControlName="informacion" name="informacion"  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <div class="form-group row">
+      <label for="formGroupExampleInput">facebook</label>
+      <input formControlName="facebook" name="facebook"   type="ubicacion" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  </div>
+      <div class="form-group row">
+      <label for="formGroupExampleInput">whatsapp</label>
+      <input formControlName="whatsapp" name="whatsapp"   type="ubicacion" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+  </div>
+        <button type="button" class="btn btn-primary" (click)="editaPerfil()" >Edita</button>
+        <button type="button" class="btn btn-primary" (click)="save()" [disabled]="true">Crear</button>
+    </form>
+
+    <hr>
+    <br>
+    <ul class="list-group" *ngFor="let item of dataperfin">
+      <li class="list-group-item">id:{{item.id }}</li>
+      <li class="list-group-item">nombre:{{item.nombre}}</li>
+      <button type="button" class="btn btn-primary" (click)="edita(item.id ,item)">edita</button>
+    </ul>
+
+</div>

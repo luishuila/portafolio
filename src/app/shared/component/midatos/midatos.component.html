@@ -1,0 +1,33 @@
+<section class="about">
+    <div class="container about__container--narrow">
+      <div class="page-section" *ngFor="let item of dataperfin">
+
+          <p class="page-section__paragraph">{{item.perfil}} </p>
+          <div class="row gutters-80">
+
+            <div class="col-md-8 about__content">
+
+              <div class="datos">
+                    <div class="data">
+                      <p class="about__bio"><strong>NOMBRE Y APELLINDO: </strong> {{item.nombre}}</p>
+                    </div>
+
+                    <div class="data">
+                      <p class="about__bio"><strong>TÍTULOS: </strong>{{item.titulo}}</p>
+                    </div>
+                    <div class="data">
+                      <p class="about__bio"><strong>IDIOMA: </strong>{{item.lenguajes}}</p>
+                    </div>
+
+                    <div class="data">
+                      <p class="about__bio"><strong>DE: </strong> {{item.nacimiento}}</p>
+                    </div>
+                    <div class="data">
+                      <p class="about__bio"><strong>VIVE: </strong> {{item.vive}}</p>
+                    </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>

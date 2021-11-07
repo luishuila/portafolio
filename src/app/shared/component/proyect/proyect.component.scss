@@ -1,0 +1,95 @@
+.contenedo{
+
+    width: auto;
+
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.cards{
+
+    display: flex;
+    z-index: 10;
+    background: url("./../../../../assets/images/overview-background.png") no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    width: 99%;
+    //background: red;
+    height: auto;
+    margin: auto;
+    margin-top: .5em;
+    overflow: auto;
+    flex-flow: wrap;
+    float: left;
+    float: left;
+    justify-content: center;
+    position: relative;
+}
+.cards{
+  background: url("./../../../../assets/images/overview-background.png")     no-repeat center center fixed; ;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+}
+.cards::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: -webkit-linear-gradient( 90deg, rgba(108,76,206, .9) 0%, rgba(127,86,253, .9) 100%);
+    z-index: -1;
+    background-size: cover;
+  }
+.imagtext{
+    cursor: pointer;
+    margin: auto;
+    display:inline-block;
+    height: 16em;
+    width: 18em;
+    background: linear-gradient(180deg, #C9C9C9  7%,  #fdfdfd );
+    margin: .5em;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgcar{
+    height: 16em;
+    width:20em;
+}
+.textocentr{
+    position: absolute;
+    background: rgb(202, 202, 202);
+    height: 16em;
+    width: 20em;
+    top: 0px;
+    opacity: .6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.centrastexto{
+    display: none;
+    color: black;
+    opacity: 1;
+
+}
+
+
+h3{
+    opacity: 1;
+}

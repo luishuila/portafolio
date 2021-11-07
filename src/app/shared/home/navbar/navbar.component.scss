@@ -1,0 +1,111 @@
+.myVideo {
+    position:absolute;
+    right: 0;
+    bottom: 0;
+  opacity: .1;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  }
+.navbarmenu{
+  
+
+
+    width: auto;
+    height: auto;
+    display: flex;
+
+
+}
+
+
+.navbarul {
+    text-decoration: none;
+    list-style: none;
+    margin: auto;
+    z-index: 100;
+
+}
+.navbarul li{
+    margin: auto;
+    display: inline ;
+    z-index: 200;
+
+}
+
+.navbara{
+    color: black;
+    font-size: 1.2em;   
+    flex-direction: row-reverse;
+    padding: .5em;
+    text-align: center;
+    z-index: 100;
+}
+
+
+.menu{
+    background-image: url('./../../../../assets/icons/boton-de-menu-de-tres-lineas-horizontales.png');
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    display: none;
+    margin-right:.2em;
+  
+}
+@media (max-width: 700px) {
+    .navbarul{
+        display: none;
+    }
+    .menu{
+        display: block;
+        z-index: 100;
+    }
+    .navbarmenu{
+        display: block;
+        position:initial;
+        display: flex;
+    }
+    .navbarull {
+        text-decoration: none;
+        display: block;
+        background:  linear-gradient(180deg, rgba(132, 94, 248) 7%,  rgb(132, 97, 238)); 
+        height: auto;
+        position: absolute;
+        height: auto;
+        position: absolute;
+        top: 3em;
+        right: .2em;
+        width: 50%;
+        height: auto;
+        margin: auto;
+        z-index: 200;
+        
+    }
+    
+    
+   
+    .navbarull> .navbarli{
+        margin: auto;
+        display: inline ;
+        display: block;
+        z-index: 200;
+        
+    }
+    
+    .navbara > .navbarli{
+        display: block;
+        text-align: left;
+    }
+     li:hover{
+        background: red;
+    }
+    li:hover{
+        background:  linear-gradient(180deg, rgb(89, 58, 180) 7%,  rgb(118, 91, 199)); 
+ 
+    }
+  
+      
+}
