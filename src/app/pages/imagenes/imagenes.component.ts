@@ -20,9 +20,11 @@ export class ImagenesComponent implements OnInit {
   archivos : FileItem[]=[]
   arrayproyectos:any
   arrayviajes:any
+  arryaexprecia:any
   constructor(private _services:FirebaseService) {
     this._services.GetImagenes('viajes').subscribe(data=>this.arrayviajes = data)
     this._services.GetImagenes('proyectos').subscribe(data=>this.arrayproyectos =data)
+    this._services.GetImagenes('exprecia').subscribe(data=>this.arryaexprecia =data)
    }
 
   ngOnInit(): void {
@@ -46,4 +48,8 @@ export class ImagenesComponent implements OnInit {
     this._services.ImageEliminar(id,data,path)
   }
 
+  eliminarexprecia(id:any,data){
+    const path = "exprecia"
+    this._services.ImageEliminar(id,data,path)
+  }
 }

@@ -1,90 +1,95 @@
-<div class="center-block" >
-    <form class="row" ngForm>
-        <div class="col-md-4 mt-5">
-            <div class="card">
-                <div class="card-header">
-                    <span>Files</span>
-                </div>
-                <div class="card-body">
-                    <div (mouseOver)="estasobre = $event" [files]="archivos" appImages [ngClass]="{'file-over':estasobre}" class="drop-zone">
-                        <h4>Drop here your images</h4>
-                        <img src="../../../assets/img/cloud.png" alt="drop-images" />
-                    </div>
-                </div>
-            </div>
+<div class="center-block">
+  <form class="row" ngForm>
+    <div class="col-md-4 mt-5">
+      <div class="card">
+        <div class="card-header">
+          <span>Files</span>
         </div>
-        <div class="col-md-8 mt-5">
-            <div class="card">
-                <div class="card-header">
-                    <h4>Files to Upload</h4>
-                </div>
+        <div class="card-body">
+          <div (mouseOver)="estasobre = $event" [files]="archivos" appImages [ngClass]="{'file-over':estasobre}"
+            class="drop-zone">
+            <h4>Drop here your images</h4>
+            <img src="../../../assets/img/cloud.png" alt="drop-images" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h4>Files to Upload</h4>
+        </div>
 
-                <div class="card-body">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>File name</th>
-                                <th>Size</th>
-                                <th>Progress</th>
-                                <th>URL</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor="let items of archivos">
-                                <td>{{items.nombreArchivo}}</td>
-                                <td>
-                                    {{items.archivo.size / 1024 / 1024 |number:'.2-2' }} MB
-                                </td>
-                                <td>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progessbar" [ngStyle]="{ 'width': items.progreso + '%' }">
-                                            {{ items.progreso|tonumber | number: "1.0-0" }} %
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <a>Download URL</a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <div class="card-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>File name</th>
+                <th>Size</th>
+                <th>Progress</th>
+                <th>URL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let items of archivos">
+                <td>{{items.nombreArchivo}}</td>
+                <td>
+                  {{items.archivo.size / 1024 / 1024 |number:'.2-2' }} MB
+                </td>
+                <td>
+                  <div class="progress">
+                    <div class="progress-bar" role="progessbar" [ngStyle]="{ 'width': items.progreso + '%' }">
+                      {{ items.progreso|tonumber | number: "1.0-0" }} %
+                    </div>
                   </div>
-                </div>
-                <br>
-                        <div class="col">
-                            <input type="text" [(ngModel)]="formulario.nombreimg" class="form-control" placeholder="Nombre" name="nombreimg">
+                </td>
+                <td>
+                  <a>Download URL</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br>
+      <div class="col">
+        <input type="text" [(ngModel)]="formulario.nombreimg" class="form-control" placeholder="Nombre"
+          name="nombreimg">
 
-                        </div>
-                        <br>
-                        <div class="col">
-                            <textarea [(ngModel)]="formulario.descripcion" class="form-control" placeholder="Descriono" name="descripcion" type="text" class="form-control" placeholder="DESCRIPCION DE LOS ARCHIVOS">
+      </div>
+      <br>
+      <div class="col">
+        <textarea [(ngModel)]="formulario.descripcion" class="form-control" placeholder="Descriono" name="descripcion"
+          type="text" class="form-control" placeholder="DESCRIPCION DE LOS ARCHIVOS">
 
                         </textarea>
 
-                        </div>
-                        <br>
-                        <ul class="list-group">
-                          <li class="list-group-item active">La ruta de la images son </li>
-                          <li class="list-group-item">viajes</li>
-                          <li class="list-group-item">proyectos</li>
-                          <li class="list-group-item">trabajos</li>
-                        </ul>
-                        <br>
-                        <input type="text" [(ngModel)]="formulario.selecion" class="form-control" placeholder="SELECIONA LA RUTA DE LO ARCHIVO" name="selecion">
+      </div>
+      <br>
+      <ul class="list-group">
+        <li class="list-group-item active">La ruta de la images son </li>
+        <li class="list-group-item">viajes</li>
+        <li class="list-group-item">proyectos</li>
+        <li class="list-group-item">trabajos</li>
+        <li class="list-group-item">exprecia</li>
+      </ul>
+      <br>
+      <input type="text" [(ngModel)]="formulario.selecion" class="form-control"
+        placeholder="SELECIONA LA RUTA DE LO ARCHIVO" name="selecion">
 
 
-                    <br>
+      <br>
 
-                    <div class="container-buttons">
-                        <button class="btn btn-danger" (click)="limpiaArchivo()">Limpia</button>
-                        <button (click)="subiimagen()" class="btn btn-primary">
-               Subir
-                 </button>
+      <div class="container-buttons">
+        <button class="btn btn-danger" (click)="limpiaArchivo()">Limpia</button>
+        <button (click)="subiimagen()" class="btn btn-primary">
+          Subir
+        </button>
 
 
-            </div>
-        </div>
-    </form>
+      </div>
+    </div>
+  </form>
 </div>
 
 
@@ -107,13 +112,13 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of arrayproyectos ; index as i">
-        <td [appCambiaestado]="item.active"  >{{i + 1}}</td>
-        <td >{{item.trabajos}}</td>
+        <td [appCambiaestado]="item.active">{{i + 1}}</td>
+        <td>{{item.trabajos}}</td>
         <td>{{item.selecion}}</td>
         <td>{{item.nombreImages}}</td>
         <td>{{item.descripcion}}</td>
         <td>
-              <button type="button" class="btn btn-danger" (click)="eliminar(item.id,item.nombreArchivo)">Eliminar</button>
+          <button type="button" class="btn btn-danger" (click)="eliminar(item.id,item.nombreArchivo)">Eliminar</button>
         </td>
       </tr>
     </tbody>
@@ -121,7 +126,7 @@
 </div>
 
 <br>
-  <h1>Viajes</h1>
+<h1>Viajes</h1>
 <div class=" table-responsive">
   <table class="table tables">
     <thead>
@@ -137,16 +142,48 @@
     </thead>
     <tbody>
       <tr *ngFor="let item of arrayviajes ; index as i">
-        <td [appCambiaestado]="item.active"  >{{i + 1}}</td>
-        <td >{{item.trabajos}}</td>
+        <td [appCambiaestado]="item.active">{{i + 1}}</td>
+        <td>{{item.trabajos}}</td>
         <td>{{item.selecion}}</td>
         <td>{{item.nombreImages}}</td>
         <td>{{item.descripcion}}</td>
         <td>
-              <button type="button" class="btn btn-danger" (click)="eliminarviajes(item.id,item.nombreArchivo)">Eliminar</button>
+          <button type="button" class="btn btn-danger"
+            (click)="eliminarviajes(item.id,item.nombreArchivo)">Eliminar</button>
         </td>
       </tr>
     </tbody>
   </table>
 </div>
 
+
+<br>
+<h1>Exprecia</h1>
+<div class=" table-responsive">
+  <table class="table tables">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Trabajos</th>
+        <th scope="col">selecion</th>
+        <th scope="col">Nombre de la image</th>
+        <th scope="col">descripcion</th>
+
+        <th scope="col">Accion</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of arryaexprecia ; index as i">
+        <td [appCambiaestado]="item.active">{{i + 1}}</td>
+        <td>{{item.trabajos}}</td>
+        <td>{{item.selecion}}</td>
+        <td>{{item.nombreImages}}</td>
+        <td>{{item.descripcion}}</td>
+        <td>
+          <button type="button" class="btn btn-danger"
+            (click)="eliminarviajes(item.id,item.nombreArchivo)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
