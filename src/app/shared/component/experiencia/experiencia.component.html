@@ -1,0 +1,15 @@
+
+<section class="icons">
+  <div class="selectoimage">
+    <carousel *ngIf="carga"  [class]="'lenguaje'" [height]="150" [width]="350" [cellWidth]="100" [cellsToScroll]="100">
+
+      <div class="carousel-cell dentrosele" *ngFor="let item of datos">
+          <img   [src]="item.url">
+          <p  class="position"> {{item.trabajos}}</p>
+      </div>
+  </carousel>
+  </div>
+</section>
+
+
+

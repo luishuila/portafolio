@@ -34,20 +34,20 @@
     margin: auto;
     background: url("./../../../../assets/images/conexiones.JPG")     no-repeat center center fixed; ;
     background-size: auto;
+    background-size: auto;
     position: relative;
     background: -webkit-linear-gradient( 90deg, rgba(108,76,206, .9) 0%, rgba(127,86,253, .9) 100%);
     flex-direction: column;
-    opacity: .9;
+
 
 }
+// .contenedo{
+//   background: url("./../../../../assets/images/conexiones.JPG")     no-repeat center center fixed; ;
+//   background-size: cover;
+//   position: relative;
+//   z-index: 1;
 
-.contenedo{
-  background: url("./../../../../assets/images/conexiones.JPG")     no-repeat center center fixed; ;
-  background-size: cover;
-  position: relative;
-  z-index: 1;
-  display: flex;
-}
+// }
 .contenedo::after{
   content: '';
   position: absolute;

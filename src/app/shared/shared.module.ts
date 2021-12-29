@@ -29,7 +29,7 @@ import { ScrollAbajoDirective } from './directives/scroll-abajo.directive';
 import { SharedRoutingModule } from './shared.routing.module';
 import { NgxSmoothScrollModule } from '@eunsatio/ngx-smooth-scroll';
 import { LoginComponent } from './login/login.component';
-
+import { ExperienciaComponent } from './component/experiencia/experiencia.component';
 
 
 
@@ -39,7 +39,7 @@ const componetes = [
   MainComponent,
   NavbarComponent,
   AsideComponent,
-
+  ExperienciaComponent,
   FooterComponent, DomhtmlDirective,
      GallerytresDirective,
 
