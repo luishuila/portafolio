@@ -35,7 +35,7 @@ export class PerfilComponent implements OnInit {
       facebook:data.facebook,
       ubicacion:data.ubicacion,
       informacion:data.informacion,
-      tokenlogin:data.tokenlogin
+
     })
   }
 
