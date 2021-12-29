@@ -13,8 +13,8 @@ export class NavbarComponent implements OnInit {
     {key:'EXPERIENCIA'  , nombre:"EXPERIENCIA" },
     {key:'SelProyect',  nombre:"PROYECTOS" },
    {key: 'SelHabilidades',nombre:"HABILIDADES"},
-    {key: 'SelPasatiempo',nombre:"PASATIEMPO"},
-    {key: 'SelFormu',nombre:"CONTACTO"},
+    {key: 'SelPasatiempo',nombre:"PASATIEMPOS"},
+    {key: 'SelFormu',nombre:"CONTACTOS"},
   ]
   varibale:boolean = false
   styilos:boolean = false
