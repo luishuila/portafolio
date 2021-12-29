@@ -11,12 +11,16 @@ export class LoginGuard implements CanActivate {
 
   }
  async canActivate() {
-    const data =  await this.garndatos()
-    if( localStorage.getItem('token') == data ){
+  const data =  await this.garndatos()
+
+  if(data != null){
+    if( localStorage.getItem('token') == data  ){
       return true
     }else{
      return this._router.navigateByUrl('/')
     }
+  }
+  return this._router.navigateByUrl('/')
 }
 
 async garndatos ()

@@ -18,8 +18,10 @@ async  login(email: string, password: string)
   {
     const id:string = "PniSxTrUKvVEabbkMQ2Wr5hIqXa2"
     const {user} = await this.afAuth.signInWithEmailAndPassword(email,password)
+
    const adat = await  this.afAuth.idToken.subscribe(data=> {
     localStorage.setItem('token', data) })
+
   if(adat){
 return true;
   }

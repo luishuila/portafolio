@@ -9,7 +9,7 @@ const routes: Routes = [
     {path:'awesomePart',component:MidatosComponent, pathMatch: 'full' },
     {path:'proyecto',component:ProyectComponent },
   ]},
- 
+  {path:'**',component:SharedComponent}
 ];
 
 @NgModule({
