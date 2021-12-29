@@ -8,8 +8,9 @@ import { DOCUMENT } from '@angular/common';
 })
 export class NavbarComponent implements OnInit {
   menux = [
-    {key:'Selnavbar', nombre:"WELCOME"},
+    {key:'Selnavbar', nombre:"INICIO"},
     {key:'SelPerfil'  , nombre:"PERFIL" },
+    {key:'EXPERIENCIA'  , nombre:"EXPERIENCIA" },
     {key:'SelProyect',  nombre:"PROYECTOS" },
    {key: 'SelHabilidades',nombre:"HABILIDADES"},
     {key: 'SelPasatiempo',nombre:"PASATIEMPO"},
