@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
     {key:'Selnavbar', nombre:"INICIO"},
     {key:'SelPerfil'  , nombre:"PERFIL" },
     {key:'EXPERIENCIA'  , nombre:"EXPERIENCIA" },
-    {key:'SelProyect',  nombre:"PROYECTOS" },
+    {key:'SelProyect',  nombre:"PORTAFOLIO" },
    {key: 'SelHabilidades',nombre:"HABILIDADES"},
     {key: 'SelPasatiempo',nombre:"PASATIEMPOS"},
     {key: 'SelFormu',nombre:"CONTACTOS"},

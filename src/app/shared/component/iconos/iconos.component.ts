@@ -35,6 +35,7 @@ export class IconosComponent implements OnInit {
       const git = [];
       const editocodigo = [];
       const herramienta = [];
+      const diseno = [];
       const otros = [];
       for (const iterator of data) {
         if (iterator.tecnologia.toLowerCase() == 'lenguaje') {
@@ -59,6 +60,8 @@ export class IconosComponent implements OnInit {
           editocodigo.push(iterator);
         } else if (iterator.tecnologia.toLowerCase() == 'herramienta') {
           herramienta.push(iterator);
+        } else if (iterator.tecnologia.toLowerCase() == 'diseno') {
+          diseno.push(iterator);
         } else {
           otros.push(iterator);
         }
@@ -71,7 +74,11 @@ export class IconosComponent implements OnInit {
                 entorno.concat(
                   stylo.concat(
                     compilado.concat(
-                      git.concat(editocodigo.concat(herramienta.concat(otros)))
+                      editocodigo.concat(
+                        git.concat(
+                          herramienta.concat(diseno.concat(otros))
+                        )
+                      )
                     )
                   )
                 )
