@@ -87,7 +87,6 @@ export class IconosComponent implements OnInit {
           )
         )
       );
-      console.log(data);
     });
   }
 
